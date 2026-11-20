@@ -1,4 +1,4 @@
-/* Color Notes 1.0.0. MIT. */
+/* Color Notes 1.0.1. MIT. */
 
 body.theme-light {
   --background-primary: #fffafc;
@@ -101,6 +101,10 @@ body {
 
 body { --bold-color: var(--color-purple); --italic-color: var(--color-orange); }
 .markdown-rendered .external-link { text-decoration-style: dotted; }
+
+.is-mobile .markdown-source-view.mod-cm6 .cm-contentContainer > .cm-content {
+  padding-inline: 8px;
+}
 
 .workspace-leaf-content :focus-visible,
 .modal :focus-visible,
