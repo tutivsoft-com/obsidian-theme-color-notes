@@ -1,4 +1,4 @@
-/* Color Notes 3.4.1. MIT. */
+/* Color Notes 3.4.2. MIT. */
 
 body.theme-light {
   --background-primary: #fffafc;
@@ -106,7 +106,11 @@ body {
 }
 
 body { --bold-color: var(--color-purple); --italic-color: var(--color-orange); }
-.markdown-rendered .external-link { text-decoration-style: dotted; }
+.markdown-rendered .external-link,
+.markdown-source-view.mod-cm6 :is(.cm-link, .cm-url) .cm-underline,
+.markdown-source-view.mod-cm6 .cm-url:not(.cm-formatting) {
+  text-decoration-style: dotted;
+}
 
 .is-mobile .markdown-source-view.mod-cm6 .cm-contentContainer > .cm-content {
   padding-inline: 8px;

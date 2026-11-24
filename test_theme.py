@@ -69,6 +69,14 @@ class ColorNotesTest(unittest.TestCase):
                     for color in colors:
                         self.assertGreaterEqual(contrast(color, self.color(palette, background)), 4.5)
 
+    def test_external_links_have_a_dotted_underline_in_reading_and_editing(self):
+        selector = (
+            ".markdown-rendered .external-link,\n"
+            ".markdown-source-view.mod-cm6 :is(.cm-link, .cm-url) .cm-underline,\n"
+            ".markdown-source-view.mod-cm6 .cm-url:not(.cm-formatting)"
+        )
+        self.assertEqual(self.rules[selector]["text-decoration-style"], "dotted")
+
     def test_heading_size_and_emphasis_work_in_both_modes(self):
         for mode in ("light", "dark"):
             with self.subTest(mode=mode):

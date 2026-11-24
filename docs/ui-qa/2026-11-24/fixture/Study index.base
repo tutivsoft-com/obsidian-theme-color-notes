@@ -1,0 +1,10 @@
+filters:
+  and:
+    - 'file.ext == "md"'
+views:
+  - type: table
+    name: Study notes
+    order:
+      - file.name
+      - note.topic
+      - note.reviewed
